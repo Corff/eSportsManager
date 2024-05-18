@@ -1,0 +1,22 @@
+randomly pick 16 teams
+
+Swiss Stage
+store each team in a dictionary string | int[]
+
+Create 8 matchups for teams with the same value in the dictionary
+
+simulate BO1 matches,
+
+Create 8 matchups for teams with the same value in the dictionary
+
+simulate BO1 matches,
+
+create 8 matches for teams with the same value in the dictionary,
+
+simulate BO3 for teams with 2 in either column
+BO1 for others
+
+Eliminate teams with 3 losses
+Qualify teams with 3 wins
+
+Simulate remaining teams
