@@ -70,3 +70,14 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+eSports (CSGO) Manager/Library/
+
+eSports (CSGO) Manager/Logs/
+
+eSports (CSGO) Manager/obj/
+
+eSports (CSGO) Manager/.vsconfig
+
+eSports (CSGO) Manager/UserSettings/
+
+eSports (CSGO) Manager/Temp/

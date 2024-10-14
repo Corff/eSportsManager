@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class old_Player : MonoBehaviour
 {
     public string ign = "";
     public string realName = "";

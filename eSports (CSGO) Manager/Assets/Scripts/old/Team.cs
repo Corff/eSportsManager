@@ -6,11 +6,11 @@ public class Team : MonoBehaviour
 {
     private string teamName;
 
-    private Player p1;
-    private Player p2;
-    private Player p3;
-    private Player p4;
-    private Player p5;
+    private old_Player p1;
+    private old_Player p2;
+    private old_Player p3;
+    private old_Player p4;
+    private old_Player p5;
     
     // Start is called before the first frame update
     public void Start()
@@ -35,15 +35,15 @@ public class Team : MonoBehaviour
                 break;
         }
 
-        var c1 = gameObject.AddComponent<Player>();
+        var c1 = gameObject.AddComponent<old_Player>();
         c1.init(teamPlayerRows[0]);
-        var c2 = gameObject.AddComponent<Player>();
+        var c2 = gameObject.AddComponent<old_Player>();
         c2.init(teamPlayerRows[1]);
-        var c3 = gameObject.AddComponent<Player>();
+        var c3 = gameObject.AddComponent<old_Player>();
         c3.init(teamPlayerRows[2]);
-        var c4 = gameObject.AddComponent<Player>();
+        var c4 = gameObject.AddComponent<old_Player>();
         c4.init(teamPlayerRows[3]);
-        var c5 = gameObject.AddComponent<Player>();
+        var c5 = gameObject.AddComponent<old_Player>();
         c5.init(teamPlayerRows[4]);
 
     }
