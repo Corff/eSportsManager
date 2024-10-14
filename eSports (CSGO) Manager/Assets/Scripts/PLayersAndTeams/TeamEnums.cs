@@ -5,4 +5,10 @@ public class TeamEnums
         NaVi,
         Heroic
     }
+    public enum CountryIDs
+    {
+        Denmark = 0,
+        France = 1,
+
+    }
 }

@@ -1,5 +1,6 @@
 using System;
 
+[Serializable]
 public class TeamMember
 {
     public Guid MemberID { get; set; } = Guid.NewGuid();
@@ -8,5 +9,5 @@ public class TeamMember
     public DateTime DateOfBirth { get; set; }
 
     public int CountryID { get; set; }
-    public int MemberTeamID { get; set; }
+    public Guid MemberTeamID { get; set; }
 }

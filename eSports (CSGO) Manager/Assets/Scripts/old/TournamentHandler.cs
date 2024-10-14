@@ -43,7 +43,7 @@ public class TournamentHandler : MonoBehaviour
         {
             GameObject t = new GameObject(team);
             t.transform.parent = teamObjectsParent.transform;
-            t.AddComponent<Team>(); 
+            t.AddComponent<old_Team>(); 
             //GameObject.Instantiate(t, teamObjectsParent.transform);
             //Instantiate(t, teamObjectsParent.transform);
         }

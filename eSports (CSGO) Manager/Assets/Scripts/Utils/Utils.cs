@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using static Enums;
 
-public class Utils : MonoBehaviour
+public static class Utils
 {
-    // Start is called before the first frame update
-    void Start()
+    public static DateTime GetYearOfBirth(int age)
     {
-        
+        DateTime dt = new(2024,1,1);
+        dt = dt.AddYears(-age);
+        return dt;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static string PlayerData
     {
-        
+        get => PlayerPrefs.GetString(PlayerPrefsKeys.PlayersData);
+        set => PlayerPrefs.SetString(PlayerPrefsKeys.PlayersData, value);
+    }
+    public static string TeamsData
+    {
+        get => PlayerPrefs.GetString(PlayerPrefsKeys.TeamsData);
+        set => PlayerPrefs.SetString(PlayerPrefsKeys.TeamsData, value);
     }
 }
