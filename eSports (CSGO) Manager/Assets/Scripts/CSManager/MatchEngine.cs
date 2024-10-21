@@ -75,7 +75,7 @@ public class MatchEngine
                 //Entry
                 double player1Entrying = player1.Entrying;
                 double player2Entrying = player2.Entrying;
-                double
+                //double
                 if(player1Entrying > player2Entrying)
                 {
                     //Player1 is better
