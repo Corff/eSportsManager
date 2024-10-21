@@ -43,7 +43,51 @@ public class MatchEngine
 
     private Vector2 SimulateRound(Vector2 startScore)
     {
+        Dictionary<Player, int> team1PlayersAndHealth = new();
+        Dictionary<Player, int> team2PlayersAndHealth = new();
+        for (int i = 0; i < Team1.Players.Count; i++)
+        {
+            team1PlayersAndHealth.Add(Team1.Players[i], 100);
+            team2PlayersAndHealth.Add(Team2.Players[i], 100);
+        }
+        bool running = true;
+        int fightCount = 0;
+        while(running)
+        {
+            //Simulate Battle
+            Player player1;
+            Player player2;
+            do
+            { 
+                int playerIndex = Random.Range(0,5);
+                player1 = Team1.Players[playerIndex];
+            }
+            while(team1PlayersAndHealth[player1] != 0);
+            do
+            {
+                int playerIndex = Random.Range(0,5);
+                player2 = Team2.Players[playerIndex];
+            }
+            while(team2PlayersAndHealth[player2] != 0);
+            
+            if(fightCount == 0)
+            {
+                //Entry
+                double player1Entrying = player1.Entrying;
+                double player2Entrying = player2.Entrying;
+                double
+                if(player1Entrying > player2Entrying)
+                {
+                    //Player1 is better
+                }
+                else
+                {
+                    //Player2 is better
+                }
+            }
 
+            fightCount += 1;
+        }
         return startScore;
     }
 }
