@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using static Enums;
 using UnityEngine.SceneManagement;
 
 public class MatchHandler : MonoBehaviour
 {
-    //public Team team1;
-    //public Team team2;
+    #region UI
+
+    public TMP_Text team1Text;
+    public TMP_Text team2Text;
+    
+    #endregion
+    
     MatchEngine me;
     private void Awake()
     {
@@ -25,9 +31,16 @@ public class MatchHandler : MonoBehaviour
         {
             t2Index = UnityEngine.Random.Range(0, DataHolder.Teams.Count);
         }
-        while (t1Index != t2Index);
+        while (t1Index == t2Index);
         Team t1 = DataHolder.Teams[t1Index];
         Team t2 = DataHolder.Teams[t2Index];
         me = new(t1, t2);
+        team1Text.text = t1.TeamName;
+        team2Text.text = t2.TeamName;
+    }
+    
+    public void StartSeries(int mapCount)
+    {
+        me.SimulateMatch(mapCount);
     }
 }

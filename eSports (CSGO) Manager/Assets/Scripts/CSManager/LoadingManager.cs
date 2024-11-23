@@ -62,7 +62,7 @@ public class LoadingManager : MonoBehaviour
 
     void SaveDB()
     {
-        string teamsSerialized = JsonConvert.SerializeObject(allTeams, Formatting.Indented);
+        string teamsSerialized = JsonConvert.SerializeObject(finalTeams, Formatting.Indented);
         using (StreamWriter sw = new(teamsDataFile))
         {
             sw.Write(teamsSerialized);
@@ -136,6 +136,7 @@ public class LoadingManager : MonoBehaviour
         {
             List<Player> thisTeamsPlayers = allPlayers.Where(i => i.MemberTeamID == team.TeamID).ToList();
             if (thisTeamsPlayers.Count != 5) continue;
+            if(team.TeamName.ToUpper().Contains("BENCH")) continue;
             team.Players = thisTeamsPlayers;
             finalTeams.Add(team);
 

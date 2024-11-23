@@ -20,6 +20,8 @@ public class Player : TeamMember
     public double Sniping { get; set; } = UnityEngine.Random.Range(0f, 100f);
     public double Utility { get; set; } = UnityEngine.Random.Range(0f, 100f);
 
+    public double Health { get; set; } = 100;
+
 
     public Player() { }
     public Player(string[] data)
@@ -33,5 +35,28 @@ public class Player : TeamMember
         MapsPlayed = double.Parse(data[8]);
         DamagePerRound = double.Parse(data[9]);
         RoundsContributed = double.Parse(data[10]);
+    }
+    public Player(Player player)
+    {
+        MemberID = player.MemberID;
+        InGameName = player.InGameName;
+        RealName = player.RealName;
+        DateOfBirth = player.DateOfBirth;
+        CountryID = player.CountryID;
+        MemberTeamID = player.MemberTeamID;
+
+        KillsPerRound = player.KillsPerRound;
+        HeadshotPercentage = player.HeadshotPercentage;
+        MapsPlayed = player.MapsPlayed;
+        DamagePerRound = player.DamagePerRound;
+        RoundsContributed = player.RoundsContributed;
+        Rating = player.Rating;
+        Firepower = player.Firepower;
+        Entrying = player.Entrying;
+        Trading = player.Trading;
+        Opening = player.Opening;
+        Clutching = player.Clutching;
+        Sniping = player.Sniping;
+        Utility = player.Utility;
     }
 }

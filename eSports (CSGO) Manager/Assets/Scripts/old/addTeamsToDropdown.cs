@@ -52,7 +52,7 @@ public class addTeamsToDropdown : MonoBehaviour
                 string pathImage = "Team Logos/" + actualTeamList[i];
                 Debug.Log(pathImage);
                 Sprite image = Resources.Load<Sprite>(pathImage);
-                this.GetComponent<TMP_Dropdown>().options.Add(new TMP_Dropdown.OptionData(actualTeamList[i], image));
+                //this.GetComponent<TMP_Dropdown>().options.Add(new TMP_Dropdown.OptionData(actualTeamList[i], image));
             }
         }
         
